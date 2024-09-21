@@ -1,0 +1,15 @@
+D:\Projects\ClassesHW\ClassesHW\obj\Debug\ClassesHW.csproj.AssemblyReference.cache
+D:\Projects\ClassesHW\ClassesHW\obj\Debug\ClassesHW.csproj.SuggestedBindingRedirects.cache
+D:\Projects\ClassesHW\ClassesHW\obj\Debug\ClassesHW.csproj.CoreCompileInputs.cache
+D:\Projects\ClassesHW\ClassesHW\bin\Debug\ClassesHW.exe.config
+D:\Projects\ClassesHW\ClassesHW\bin\Debug\ClassesHW.exe
+D:\Projects\ClassesHW\ClassesHW\bin\Debug\ClassesHW.pdb
+D:\Projects\ClassesHW\ClassesHW\obj\Debug\ClassesHW.exe
+D:\Projects\ClassesHW\ClassesHW\obj\Debug\ClassesHW.pdb
+E:\Visual Studio Projects\DungeonGame\DungeonGame-master\ClassesHW\obj\Debug\ClassesHW.csproj.AssemblyReference.cache
+E:\Visual Studio Projects\DungeonGame\DungeonGame-master\ClassesHW\obj\Debug\ClassesHW.csproj.CoreCompileInputs.cache
+E:\Visual Studio Projects\DungeonGame\DungeonGame-master\ClassesHW\obj\Debug\ClassesHW.exe
+E:\Visual Studio Projects\DungeonGame\DungeonGame-master\ClassesHW\obj\Debug\ClassesHW.pdb
+E:\Visual Studio Projects\DungeonGame\DungeonGame-master\ClassesHW\bin\Debug\ClassesHW.exe.config
+E:\Visual Studio Projects\DungeonGame\DungeonGame-master\ClassesHW\bin\Debug\ClassesHW.exe
+E:\Visual Studio Projects\DungeonGame\DungeonGame-master\ClassesHW\bin\Debug\ClassesHW.pdb
