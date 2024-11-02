@@ -22,12 +22,18 @@ namespace ClassesHW
             Room room2 = new Room("Maze of Shattered Dreams", 2, 0);
             Room room3 = new Room("Inferno's Heart", 3, 1);
             Room room4 = new Room("Vault of Broken Souls", 2, 3);
+            TreasureRoom room5 = new TreasureRoom("Treasure Room", 4, 2);
+            TreasureRoom room6 = new TreasureRoom("Treasure Room", 5, 1);
+            TrainingRoom room7 = new TrainingRoom("Training Room", 2, 5);
 
 
             program.rooms.Add(room1);
             program.rooms.Add(room2);
             program.rooms.Add(room3);
             program.rooms.Add(room4);
+            program.rooms.Add(room5);
+            program.rooms.Add(room6);
+            program.rooms.Add(room7);
 
             Monster monster1 = new Monster(60, 15, "Soul Eater", 2, 3);
             Monster monster2 = new Monster(80, 20, "Blood Drinker", 3, 1);
@@ -35,6 +41,11 @@ namespace ClassesHW
             Monster monster4 = new Monster(50, 20, "Death Wolf", 2, 0);
             Monster monster5 = new Monster(90, 30, "Black Claw", 4, 5);
             Monster monster6 = new Monster(90, 30, "Black Claw", 5, 4);
+            EliteMonster monster7 = new EliteMonster(100, 35, "Elite Monster", 1, 3);
+            EliteMonster monster8 = new EliteMonster(100, 30, "Elite Monster", 4, 1);
+            RageMonster monster9 = new RageMonster(100, 30, "Rage Monster", 3, 2);
+            RageMonster monster10 = new RageMonster(100, 30, "Rage Monster", 2, 4);
+
 
             program.monsters.Add(monster1);
             program.monsters.Add(monster2);
@@ -42,6 +53,10 @@ namespace ClassesHW
             program.monsters.Add(monster4);
             program.monsters.Add(monster5);
             program.monsters.Add(monster6);
+            program.monsters.Add(monster7);
+            program.monsters.Add(monster8);
+            program.monsters.Add(monster9);
+            program.monsters.Add(monster10);
 
 
             Console.WriteLine("Welcome to the Dungeon Game! Defeat all the monsters to win. Press enter to start. ");
@@ -109,6 +124,16 @@ namespace ClassesHW
                 {
                     if (room.IsInRoom(player.playerLocationX, player.playerLocationY))
                         room.OnEnteredRoom();
+
+                    if(room.IsInTreasureRoom())
+                    {
+                        TreasureRoom treasureRoom = room as TreasureRoom;
+                        int randomReward = treasureRoom.RandomizeReward();
+                        if (randomReward == 1) // Increase XP
+                            player.playerLevel++;
+                        if (randomReward == 2) // receive one shield
+                            player.playerShields++;
+                    }
                 }
 
                 // Check if player encountered monster
@@ -117,11 +142,12 @@ namespace ClassesHW
                     if (monster.HasEncounteredMonster(player.playerLocationX, player.playerLocationY))
                     {
                         StartFight(monster);
-                        if(failCount == 10)
+                        if (failCount == 10)
                         {
                             Console.WriteLine("Game over");
                             return;
                         }
+
                     }
                 }
 
@@ -151,11 +177,7 @@ namespace ClassesHW
                 hasPlayerDied = player.playerHp <= 0;
                 if (!hasPlayerDied)
                 {
-                    monster.monsterHp -= player.Attack();
-                    if(monster.monsterHp < 0)
-                        monster.monsterHp = 0;
-                    Console.WriteLine("You attacked the monster! monster's hp is now " + monster.monsterHp + " press enter to continue");
-                    Console.ReadKey();
+                    monster.TakeDamage(player.Attack());
                 }
                 else
                 {
@@ -167,15 +189,17 @@ namespace ClassesHW
                 hasMonsterDied = monster.monsterHp <= 0;
                 if (!hasMonsterDied)
                 {
-                    player.playerHp -= monster.MonsterAttack();
-                    if(player.playerHp < 0)
-                        player.playerHp = 0;
-                    Console.WriteLine("The monster attacked you! Your HP is now " + player.playerHp + " press enter to continue");
-                    Console.ReadKey();
+                    player.TakeDamage(monster.MonsterAttack());
                 }
                 else
                 {
-                    player.PlayerLevelsUp();
+                    if (monster.IsEliteMonter())
+                    {
+                        EliteMonster encounteredMonster = (EliteMonster)monster;
+                        encounteredMonster.Revive();
+                    }
+                    else player.PlayerLevelsUp();
+
                 }
             }
         }
