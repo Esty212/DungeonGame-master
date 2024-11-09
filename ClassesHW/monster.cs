@@ -35,6 +35,7 @@ namespace ClassesHW
         }
 
         public bool IsEliteMonter() => this is EliteMonster;
+        public bool IsRageMonster() => this is RageMonster;
 
         public virtual void TakeDamage(int damage) 
         {

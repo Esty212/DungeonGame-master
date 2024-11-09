@@ -130,9 +130,24 @@ namespace ClassesHW
                         TreasureRoom treasureRoom = room as TreasureRoom;
                         int randomReward = treasureRoom.RandomizeReward();
                         if (randomReward == 1) // Increase XP
+                        {
                             player.playerLevel++;
+                            Console.WriteLine("You received XP and leveled up!");
+                        }
+
                         if (randomReward == 2) // receive one shield
+                        {
                             player.playerShields++;
+                            Console.WriteLine("You received a shield! Your shield will absorb one monster attack.");
+                        }
+
+                    }
+
+                    if(room.IsInTrainingRoom())
+                    {
+                        TrainingRoom trainingRoom = room as TrainingRoom;
+                        player.maxAttackPower += 30;
+                        Console.WriteLine("You just received extra 30 power points from the training room!");
                     }
                 }
 
