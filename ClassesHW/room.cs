@@ -27,7 +27,7 @@ namespace ClassesHW
             return roomX == x && roomY == y;
         }
 
-        public bool IsInTreasureRoom() => this is TreasureRoom;
+        public bool IsTreasureRoom() => this is TreasureRoom;
 
         public bool IsInTrainingRoom() => this is TrainingRoom;
 

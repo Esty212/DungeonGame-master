@@ -123,31 +123,33 @@ namespace ClassesHW
                 foreach (Room room in rooms)
                 {
                     if (room.IsInRoom(player.playerLocationX, player.playerLocationY))
+                    {
                         room.OnEnteredRoom();
 
-                    if(room.IsInTreasureRoom())
-                    {
-                        TreasureRoom treasureRoom = room as TreasureRoom;
-                        int randomReward = treasureRoom.RandomizeReward();
-                        if (randomReward == 1) // Increase XP
+                        if (room.IsTreasureRoom())
                         {
-                            player.playerLevel++;
-                            Console.WriteLine("You received XP and leveled up!");
+                            TreasureRoom treasureRoom = room as TreasureRoom;
+                            int randomReward = treasureRoom.RandomizeReward();
+                            if (randomReward == 1) // Increase XP
+                            {
+                                player.playerLevel++;
+                                Console.WriteLine("You received XP and leveled up!");
+                            }
+
+                            if (randomReward == 2) // receive one shield
+                            {
+                                player.playerShields++;
+                                Console.WriteLine("You received a shield! Your shield will absorb one monster attack.");
+                            }
+
                         }
 
-                        if (randomReward == 2) // receive one shield
+                        if (room.IsInTrainingRoom())
                         {
-                            player.playerShields++;
-                            Console.WriteLine("You received a shield! Your shield will absorb one monster attack.");
+                            TrainingRoom trainingRoom = room as TrainingRoom;
+                            player.maxAttackPower += 30;
+                            Console.WriteLine("You just received extra 30 power points from the training room!");
                         }
-
-                    }
-
-                    if(room.IsInTrainingRoom())
-                    {
-                        TrainingRoom trainingRoom = room as TrainingRoom;
-                        player.maxAttackPower += 30;
-                        Console.WriteLine("You just received extra 30 power points from the training room!");
                     }
                 }
 

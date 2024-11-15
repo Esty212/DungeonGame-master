@@ -16,7 +16,7 @@ namespace ClassesHW
             _monsterShieldPoints = shieldPoints;
         }
 
-        private bool IsShielded()
+        public bool IsShielded()
         {
             return _monsterShieldPoints > 0;
         }
