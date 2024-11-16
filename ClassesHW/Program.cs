@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -158,13 +159,21 @@ namespace ClassesHW
                 {
                     if (monster.HasEncounteredMonster(player.playerLocationX, player.playerLocationY))
                     {
-                        StartFight(monster);
-                        if (failCount == 10)
+                        bool isPlayerAlive = StartFight(monster);
+                        if (!isPlayerAlive)
                         {
-                            Console.WriteLine("Game over");
-                            return;
-                        }
+                            if (failCount == 10)
+                            {
+                                Console.WriteLine("Game over");
+                                return;
+                            }
 
+                            else if (failCount > 0)
+                            {
+                                Console.WriteLine("You're back to the start! You have " + (10 - failCount) + " lives left.");
+                                break;
+                            }
+                        }
                     }
                 }
 
@@ -182,7 +191,7 @@ namespace ClassesHW
 
         }
 
-        public void StartFight(Monster monster)
+        public bool StartFight(Monster monster)
         {
             Console.WriteLine("You've encountered " + monster.name + "! Press enter to start the battle");
             Console.ReadKey();
@@ -200,7 +209,7 @@ namespace ClassesHW
                 {
                     player.PlayerLoses();
                     failCount++;
-                    return;
+                    return false;
                 }
 
                 hasMonsterDied = monster.monsterHp <= 0;
@@ -219,6 +228,7 @@ namespace ClassesHW
 
                 }
             }
+            return true;
         }
     }
 }

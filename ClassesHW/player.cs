@@ -31,6 +31,7 @@ namespace ClassesHW
         public void PlayerLoses()
         {
             Console.WriteLine("You have died.");
+            playerHp = 100;
             SetLocation(0, 0);
         }
 

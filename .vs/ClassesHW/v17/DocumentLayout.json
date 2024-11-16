@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94FDDBB0-3DF2-4451-868F-A742143E2825}|ClassesHW\\ClassesHW.csproj|E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\classeshw\\shieldedmonster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94FDDBB0-3DF2-4451-868F-A742143E2825}|ClassesHW\\ClassesHW.csproj|solutionrelative:classeshw\\shieldedmonster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{94FDDBB0-3DF2-4451-868F-A742143E2825}|ClassesHW\\ClassesHW.csproj|e:\\visual studio projects\\dungeongame\\dungeongame-master\\classeshw\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94FDDBB0-3DF2-4451-868F-A742143E2825}|ClassesHW\\ClassesHW.csproj|solutionrelative:classeshw\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94FDDBB0-3DF2-4451-868F-A742143E2825}|ClassesHW\\ClassesHW.csproj|E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\classeshw\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94FDDBB0-3DF2-4451-868F-A742143E2825}|ClassesHW\\ClassesHW.csproj|solutionrelative:classeshw\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94FDDBB0-3DF2-4451-868F-A742143E2825}|ClassesHW\\ClassesHW.csproj|E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\classeshw\\shieldedmonster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94FDDBB0-3DF2-4451-868F-A742143E2825}|ClassesHW\\ClassesHW.csproj|solutionrelative:classeshw\\shieldedmonster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94FDDBB0-3DF2-4451-868F-A742143E2825}|ClassesHW\\ClassesHW.csproj|E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\classeshw\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{94FDDBB0-3DF2-4451-868F-A742143E2825}|ClassesHW\\ClassesHW.csproj|E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\classeshw\\elitemonster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94FDDBB0-3DF2-4451-868F-A742143E2825}|ClassesHW\\ClassesHW.csproj|solutionrelative:classeshw\\elitemonster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94FDDBB0-3DF2-4451-868F-A742143E2825}|ClassesHW\\ClassesHW.csproj|E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\classeshw\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94FDDBB0-3DF2-4451-868F-A742143E2825}|ClassesHW\\ClassesHW.csproj|solutionrelative:classeshw\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94FDDBB0-3DF2-4451-868F-A742143E2825}|ClassesHW\\ClassesHW.csproj|E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\classeshw\\ragemonster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,11 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "EliteMonster.cs",
               "DocumentMoniker": "E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\ClassesHW\\EliteMonster.cs",
               "RelativeDocumentMoniker": "ClassesHW\\EliteMonster.cs",
@@ -58,21 +58,19 @@
               "RelativeToolTip": "ClassesHW\\EliteMonster.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T12:34:28.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T12:34:28.937Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ShieldedMonster.cs",
               "DocumentMoniker": "E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\ClassesHW\\ShieldedMonster.cs",
               "RelativeDocumentMoniker": "ClassesHW\\ShieldedMonster.cs",
               "ToolTip": "E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\ClassesHW\\ShieldedMonster.cs",
               "RelativeToolTip": "ClassesHW\\ShieldedMonster.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBUAAAAJAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T12:34:14.41Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T12:34:14.41Z"
             },
             {
               "$type": "Document",
@@ -112,20 +110,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "player.cs",
               "DocumentMoniker": "E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\ClassesHW\\player.cs",
               "RelativeDocumentMoniker": "ClassesHW\\player.cs",
               "ToolTip": "E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\ClassesHW\\player.cs",
               "RelativeToolTip": "ClassesHW\\player.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAewCgAAAAIAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAYwCEAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T06:41:40.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T06:41:40.756Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "room.cs",
               "DocumentMoniker": "E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\ClassesHW\\room.cs",
               "RelativeDocumentMoniker": "ClassesHW\\room.cs",
@@ -133,12 +130,11 @@
               "RelativeToolTip": "ClassesHW\\room.cs",
               "ViewState": "AQIAABAAAAAAAAAAAIA0wB0AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T06:41:40.796Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T06:41:40.796Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "monster.cs",
               "DocumentMoniker": "E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\ClassesHW\\monster.cs",
               "RelativeDocumentMoniker": "ClassesHW\\monster.cs",
@@ -146,18 +142,17 @@
               "RelativeToolTip": "ClassesHW\\monster.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAswBEAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T06:41:40.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T06:41:40.797Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\ClassesHW\\Program.cs",
               "RelativeDocumentMoniker": "ClassesHW\\Program.cs",
               "ToolTip": "E:\\Visual Studio Projects\\DungeonGame\\DungeonGame-master\\ClassesHW\\Program.cs",
               "RelativeToolTip": "ClassesHW\\Program.cs",
-              "ViewState": "AQIAAJwAAAAAAAAAAAAowDkAAAArAAAA",
+              "ViewState": "AQIAAJsAAAAAAAAAAAAWwKEAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-14T06:41:41.064Z",
               "EditorCaption": ""
