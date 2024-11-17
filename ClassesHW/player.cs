@@ -49,7 +49,15 @@ namespace ClassesHW
         public void TakeDamage(int damage)
         {
             if (playerShields > 0)
+            {
                 playerShields--;
+
+                if (playerShields <= 0)
+                    Console.WriteLine("You are out of shield points!");
+                else Console.WriteLine("You have " + playerShields + " shield points left.");
+
+            } 
+
             else playerHp -= damage;
 
             if (playerHp < 0)

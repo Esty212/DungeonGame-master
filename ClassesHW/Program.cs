@@ -23,7 +23,7 @@ namespace ClassesHW
             Room room2 = new Room("Maze of Shattered Dreams", 2, 0);
             Room room3 = new Room("Inferno's Heart", 3, 1);
             Room room4 = new Room("Vault of Broken Souls", 2, 3);
-            TreasureRoom room5 = new TreasureRoom("Treasure Room", 4, 2);
+            TreasureRoom room5 = new TreasureRoom("Treasure Room", 1, 0);
             TreasureRoom room6 = new TreasureRoom("Treasure Room", 5, 1);
             TrainingRoom room7 = new TrainingRoom("Training Room", 2, 5);
 
@@ -43,9 +43,9 @@ namespace ClassesHW
             Monster monster5 = new Monster(90, 30, "Black Claw", 4, 5);
             Monster monster6 = new Monster(90, 30, "Black Claw", 5, 4);
             EliteMonster monster7 = new EliteMonster(100, 35, "Elite Monster", 1, 3);
-            EliteMonster monster8 = new EliteMonster(100, 30, "Elite Monster", 4, 1);
             RageMonster monster9 = new RageMonster(100, 30, "Rage Monster", 3, 2);
-            RageMonster monster10 = new RageMonster(100, 30, "Rage Monster", 2, 4);
+            RageMonster monster10 = new RageMonster(100, 30, "Rage Demon", 2, 4);
+            ShieldedMonster monster11 = new ShieldedMonster(100, 30, "Shielded Monster", 4, 0, 2);
 
 
             program.monsters.Add(monster1);
@@ -55,9 +55,9 @@ namespace ClassesHW
             program.monsters.Add(monster5);
             program.monsters.Add(monster6);
             program.monsters.Add(monster7);
-            program.monsters.Add(monster8);
             program.monsters.Add(monster9);
             program.monsters.Add(monster10);
+            program.monsters.Add(monster11);
 
 
             Console.WriteLine("Welcome to the Dungeon Game! Defeat all the monsters to win. Press enter to start. ");
@@ -147,7 +147,6 @@ namespace ClassesHW
 
                         if (room.IsInTrainingRoom())
                         {
-                            TrainingRoom trainingRoom = room as TrainingRoom;
                             player.maxAttackPower += 30;
                             Console.WriteLine("You just received extra 30 power points from the training room!");
                         }
@@ -217,16 +216,9 @@ namespace ClassesHW
                 {
                     player.TakeDamage(monster.MonsterAttack());
                 }
-                else
-                {
-                    if (monster.IsEliteMonter())
-                    {
-                        EliteMonster encounteredMonster = (EliteMonster)monster;
-                        encounteredMonster.Revive();
-                    }
-                    else player.PlayerLevelsUp();
+                else player.PlayerLevelsUp();
 
-                }
+                
             }
             return true;
         }

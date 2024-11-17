@@ -10,22 +10,25 @@ namespace ClassesHW
     {
         private int _revivalAmount;
 
-        public EliteMonster(int monsterHp, int monsterPower, string name, int monsterX, int monsterY) 
+        public EliteMonster(int monsterHp, int monsterPower, string name, int monsterX, int monsterY)
             : base(monsterHp, monsterPower, name, monsterX, monsterY)
         {
-            _revivalAmount = new Random().Next(1, 2);
+            _revivalAmount = new Random().Next(1, 3);
         }
 
-        public void Revive()
+        private void Revive()
         {
-            if (_revivalAmount > 0)
-            {
-                monsterHp = 100;
-                _revivalAmount--;
-                Console.WriteLine("This elite monster came back to life! press enter to continue the fight.");
-                Console.ReadKey();
-                
-            }
+            monsterHp = 100;
+            _revivalAmount--;
+            Console.WriteLine("This elite monster came back to life! press enter to continue the fight.");
+            Console.ReadKey();
+        }
+
+        public override void TakeDamage(int damage)
+        {
+            base.TakeDamage(damage);
+            if (monsterHp <= 0 && _revivalAmount > 0)
+                Revive();
         }
     }
 }

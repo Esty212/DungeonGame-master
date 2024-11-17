@@ -16,19 +16,25 @@ namespace ClassesHW
             _monsterShieldPoints = shieldPoints;
         }
 
-        public bool IsShielded()
+        private bool IsShielded()
         {
             return _monsterShieldPoints > 0;
         }
 
         public override void TakeDamage(int damage)
         {
-            if(IsShielded())
+            Console.WriteLine("You attacked the monster! monster's hp is now " + monsterHp + " press enter to continue");
+            if (IsShielded())
+            {
                 _monsterShieldPoints--;
+                if (!IsShielded())
+                    Console.WriteLine(name + "'s shield has broke!");
+                else Console.WriteLine(name + " has " +  _monsterShieldPoints + " shield points left."); 
+            }
             else
             {
                 monsterHp -= damage;
-                if(monsterHp <= 0)
+                if (monsterHp <= 0)
                 {
                     Console.WriteLine(name + " has died! Press any key to continue");
                     Console.ReadKey();

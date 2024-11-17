@@ -18,7 +18,7 @@ namespace ClassesHW
         public int RandomizeReward()
         {
             Random rnd = new Random();
-            return rnd.Next(1, 2);
+            return rnd.Next(1, 3);
 
         }
     }
