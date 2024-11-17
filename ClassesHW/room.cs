@@ -13,6 +13,7 @@ namespace ClassesHW
         public int roomY;
 
 
+
         public Room (string name, int roomX, int roomY)
         {
             this.name = name;
@@ -25,6 +26,10 @@ namespace ClassesHW
         {
             return roomX == x && roomY == y;
         }
+
+        public bool IsTreasureRoom() => this is TreasureRoom;
+
+        public bool IsInTrainingRoom() => this is TrainingRoom;
 
         public void OnEnteredRoom()
         {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ClassesHW
@@ -13,6 +14,8 @@ namespace ClassesHW
         public int maxAttackPower = 30;
         public int playerLocationX;
         public int playerLocationY;
+
+        public int playerShields;
 
         //Monster monster = new Monster();
 
@@ -28,6 +31,7 @@ namespace ClassesHW
         public void PlayerLoses()
         {
             Console.WriteLine("You have died.");
+            playerHp = 100;
             SetLocation(0, 0);
         }
 
@@ -40,6 +44,27 @@ namespace ClassesHW
         public int Attack()
         {
             return new Random().Next(10, maxAttackPower);
+        }
+
+        public void TakeDamage(int damage)
+        {
+            if (playerShields > 0)
+            {
+                playerShields--;
+
+                if (playerShields <= 0)
+                    Console.WriteLine("You are out of shield points!");
+                else Console.WriteLine("You have " + playerShields + " shield points left.");
+
+            } 
+
+            else playerHp -= damage;
+
+            if (playerHp < 0)
+                playerHp = 0;
+
+            Console.WriteLine("The monster attacked you! Your HP is now " + playerHp + " press enter to continue");
+            Console.ReadKey();
         }
     }
 

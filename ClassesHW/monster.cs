@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ClassesHW
@@ -13,7 +14,6 @@ namespace ClassesHW
         public string name;
         public int monsterX;
         public int monsterY;
-
 
         public Monster(int monsterHp, int monsterPower, string name, int monsterX, int monsterY)
         {
@@ -29,10 +29,24 @@ namespace ClassesHW
             return x == monsterX && y == monsterY;
         }
 
-        public int MonsterAttack()
+        public virtual int MonsterAttack()
         {
             return new Random().Next(5, maxMonsterAttackPower);
         }
+
+        public bool IsEliteMonter() => this is EliteMonster;
+        public bool IsRageMonster() => this is RageMonster;
+
+        public virtual void TakeDamage(int damage) 
+        {
+            monsterHp -= damage;
+            if (monsterHp < 0)
+                monsterHp = 0;
+
+            Console.WriteLine("You attacked the monster! monster's hp is now " + monsterHp + " press enter to continue");
+            Console.ReadKey();
+        }
+
 
     }
 }
